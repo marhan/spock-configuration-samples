@@ -24,17 +24,11 @@ Build servers
 Further Resources
 -----------------
 
-* [Spock homepage](http://spockframework.org)
-* [Spock web console](https://meetspock.appspot.com)
-* [Spock main documentation](http://wiki.spockframework.org/SpockBasics)
-* [Spock user discussion group](http://forum.spockframework.org)
-* [Spock issue tracker](http://issues.spockframework.org)
-* [Spock build server](http://builds.spockframework.org)
-* [Spock on Twitter](http://twitter.com/pniederw)
-* [Spock reports homepage](https://github.com/renatoathaydes/spock-reports)
 * [Gradle homepage](http://www.gradle.org)
+* [Spock homepage](http://spockframework.org)
 * [Snakeyaml homepage](https://bitbucket.org/asomov/snakeyaml/overview)
 * [Rest-assured](http://rest-assured.io/)
+* [Srping Boot](https://spring.io/projects/spring-boot)
 
 
 Contact
