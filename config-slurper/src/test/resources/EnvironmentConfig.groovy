@@ -1,5 +1,3 @@
-package de.marhan.sample.spock.config
-
 environments {
 	dev {
 		services.google.url = "https://google.com"
