@@ -32,7 +32,6 @@ allprojects {
 
 	ext {
 		maxTestThreads = 1
-        testEnvironment = findProperty('environment') ? findProperty('environment') : 'dev'
 	}
 
 	buildscript {
@@ -46,12 +45,15 @@ allprojects {
 		mavenCentral()
 		maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
 	}
+
+
 }
 
 subprojects {
 
-	println " Gradle version ${gradle.gradleVersion}"
-	println " Project: $name v$version"
+	ext {
+		testEnvironment = findProperty('environment') ? findProperty('environment') : 'dev'
+	}
 
 /*#########################################################################*/
 /*                                 PLUGINS                                 */
@@ -70,6 +72,35 @@ subprojects {
 
 	compileJava.options.encoding = 'UTF-8'
 	compileTestJava.options.encoding = 'UTF-8'
+
+	/*#########################################################################*/
+	/*                                PROPERTIES                               */
+	/*#########################################################################*/
+
+	test.doFirst {
+		def availableEnvironments = ['dev', 'preview', 'live']
+
+		if (!availableEnvironments.contains(testEnvironment)) {
+			def message = "Target environment '${testEnvironment}' not supported. Please use one of the following: " + availableEnvironments.join(", ")
+			throw new TaskExecutionException(setUpEnvironmentConfiguration, new ResourceException(message))
+		}
+
+		println ""
+		println "#-----------------------------------------#"
+		println " Gradle version ${gradle.gradleVersion}"
+		println " Subproject: ${project.name} v${version}"
+		println " Target environment: ${testEnvironment}"
+		println "#-----------------------------------------#"
+		println ""
+
+		systemProperty 'environment', "${testEnvironment}"
+		systemProperty 'spring.profiles.active', "${testEnvironment}"
+		systemProperty 'com.athaydes.spockframework.report.projectName', "${project.name} against [${testEnvironment}]"
+		systemProperty 'com.athaydes.spockframework.report.projectVersion', "${version}"
+		systemProperty 'com.athaydes.spockframework.report.outputDir', "build/spock-reports-${testEnvironment}"
+		systemProperty 'com.athaydes.spockframework.report.showCodeBlocks', "true"
+	}
+
 
 }
 

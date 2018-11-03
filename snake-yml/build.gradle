@@ -29,26 +29,4 @@ dependencies {
 }
 
 
-/*#########################################################################*/
-/*                                PROPERTIES                               */
-/*#########################################################################*/
 
-test.doFirst {
-	def availableEnvironments = ['dev', 'preview', 'live']
-
-	if (!availableEnvironments.contains(testEnvironment)) {
-		def message = "Target environment '${testEnvironment}' not supported. Please use one of the following: " + availableEnvironments.join(", ")
-		throw new TaskExecutionException(setUpEnvironmentConfiguration, new ResourceException(message))
-	}
-
-	println "***"
-	println "Target environment: '${testEnvironment}'"
-	println "***"
-
-	systemProperty 'environment', "${testEnvironment}"
-	systemProperty 'spring.profiles.active', "${testEnvironment}"
-	systemProperty 'com.athaydes.spockframework.report.projectName', "${subProjectName} against [${testEnvironment}]"
-	systemProperty 'com.athaydes.spockframework.report.projectVersion', "${version}"
-	systemProperty 'com.athaydes.spockframework.report.outputDir',  "build/spock-reports-${testEnvironment}"
-	systemProperty 'com.athaydes.spockframework.report.showCodeBlocks',  "true"
-}

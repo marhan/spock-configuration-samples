@@ -1,2 +1,3 @@
 rootProject.name = "spock-configuration-samples"
 include 'snake-yml'
+include 'spring-boot'
