@@ -1,0 +1,81 @@
+/*#########################################################################*/
+/*                         Semantic Versioning                             */
+/*#########################################################################*/
+
+plugins {
+	id 'pl.allegro.tech.build.axion-release' version '1.9.0'
+}
+
+scmVersion {
+	checks {
+		uncommittedChanges = false
+		aheadOfRemote = false
+		snapshotDependencies = false
+	}
+	tag {
+		prefix = ''
+		initialVersion = { config, position -> '1.0.0' }
+	}
+	versionIncrementer 'incrementPatch'
+	versionCreator 'versionWithBranch'
+	branchVersionIncrementer = [
+		'release*': 'incrementMinor'
+	]
+}
+
+/*#########################################################################*/
+/*                                GENERAL                                  */
+/*#########################################################################*/
+allprojects {
+	group = "de.marhan"
+	version = scmVersion.version
+
+	ext {
+		maxTestThreads = 1
+        testEnvironment = findProperty('environment') ? findProperty('environment') : 'dev'
+	}
+
+	buildscript {
+		repositories {
+			mavenCentral()
+		}
+	}
+
+	repositories {
+		mavenLocal()
+		mavenCentral()
+		maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
+	}
+}
+
+subprojects {
+
+	println " Gradle version ${gradle.gradleVersion}"
+	println " Project: $name v$version"
+
+/*#########################################################################*/
+/*                                 PLUGINS                                 */
+/*#########################################################################*/
+
+	apply plugin: "idea"
+	apply plugin: "java"
+	apply plugin: 'groovy'
+
+/*#########################################################################*/
+/*                                Compiler                                 */
+/*#########################################################################*/
+
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+
+	compileJava.options.encoding = 'UTF-8'
+	compileTestJava.options.encoding = 'UTF-8'
+
+}
+
+/*#########################################################################*/
+/*                                 GRADLE                                  */
+/*#########################################################################*/
+
+task wrapper(type: Wrapper) { gradleVersion = '4.10.2' }
+

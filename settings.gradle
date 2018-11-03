@@ -1,0 +1,2 @@
+rootProject.name = "spock-configuration-samples"
+include 'snake-yml'

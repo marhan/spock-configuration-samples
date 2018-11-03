@@ -1,3 +1,16 @@
+# IDE
+.idea
+.vscode
+*.iml
+.settings
+.classpath
+.project
+bin
+
+# Gradle
+.gradle
+build
+
 # Compiled class file
 *.class
 
