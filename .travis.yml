@@ -6,6 +6,9 @@ jdk:
 os:
 - linux
 
+before_install:
+  - chmod +x gradlew
+
 cache:
   directories:
   - $HOME/.gradle
