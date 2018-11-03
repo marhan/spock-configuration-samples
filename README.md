@@ -26,9 +26,9 @@ Further Resources
 
 * [Gradle homepage](http://www.gradle.org)
 * [Spock homepage](http://spockframework.org)
-* [Snakeyaml homepage](https://bitbucket.org/asomov/snakeyaml/overview)
+* [snakeyaml homepage](https://bitbucket.org/asomov/snakeyaml/overview)
 * [Rest-assured](http://rest-assured.io/)
-* [Srping Boot](https://spring.io/projects/spring-boot)
+* [Spring Boot](https://spring.io/projects/spring-boot)
 
 
 Contact
