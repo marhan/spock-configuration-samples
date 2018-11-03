@@ -7,13 +7,19 @@ Prerequisites
 -------------
 - JDK 1.8
 
-Run with Gradle
+Run tests with Gradle
 --------------------
 Type:
 
     ./gradlew clean test -Penvironment=dev
     
-Possible environments: dev, preview, live
+Supported environments: dev, preview, live
+
+Build servers
+-------------
+
+* [Travis CI](https://travis-ci.org/marhan/spock-configuration-samples)
+* [Circle CI](https://circleci.com/gh/marhan/spock-configuration-samples)
 
 Further Resources
 -----------------
