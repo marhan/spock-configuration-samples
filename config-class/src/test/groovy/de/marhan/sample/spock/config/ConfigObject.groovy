@@ -19,6 +19,4 @@ class ConfigObject {
 			"live"   : ["google.url": "https://google.com"]
 		]
 	}
-
-
 }
