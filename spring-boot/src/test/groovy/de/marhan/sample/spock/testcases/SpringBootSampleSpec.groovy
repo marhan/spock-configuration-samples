@@ -9,7 +9,7 @@ import spock.lang.Specification
 import static io.restassured.RestAssured.given
 
 @SpringBootTest
-class GoogleReachableSpec extends Specification {
+class SpringBootSampleSpec extends Specification {
 
 	@Autowired
 	SampleApplicationProperties properties

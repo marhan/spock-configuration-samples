@@ -8,7 +8,7 @@ import spock.lang.Specification
 
 import static io.restassured.RestAssured.given
 
-class GoogleReachableSpec extends Specification {
+class SnakeYmlSampleSpec extends Specification {
 
 	Configuration configuration
 	ServiceConfig serviceConfig
