@@ -8,6 +8,7 @@ Configuration variants
 
 * [Groovy config class](config-class) (Custom Groovy object)
 * [Groovy config slurper](config-slurper) (Groovy config DSL parser)
+* [Groovy JSON slurper](json-slurper) (JSON config parser)
 * [snakeyml](snake-yml) (YAML config file parser)
 * [Spring Boot (Sidecar)](spring-boot) (Spring Boot based YAML config file parser with Dependency Injection)
 

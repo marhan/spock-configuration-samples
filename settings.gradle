@@ -2,4 +2,5 @@ rootProject.name = "spock-configuration-samples"
 include 'snake-yml'
 include 'spring-boot'
 include 'config-slurper'
+include 'json-slurper'
 include 'config-class'
