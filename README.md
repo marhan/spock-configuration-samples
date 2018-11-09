@@ -29,6 +29,11 @@ Build servers
 * [Travis CI](https://travis-ci.org/marhan/spock-configuration-samples) (JDK10, JDK8)
 * [Circle CI](https://circleci.com/gh/marhan/spock-configuration-samples) (JDK8)
 
+Presentation
+------------
+
+* [Speaker Deck](https://speakerdeck.com/markushanses/spock-configuration-variants)
+
 Further Resources
 -----------------
 
