@@ -12,12 +12,11 @@ ext {
 
 dependencies {
 
-	testCompile "org.codehaus.groovy:groovy-all:2.5.2"
 	testCompile "net.bytebuddy:byte-buddy:1.9.1"
 	testCompile "org.objenesis:objenesis:2.6"
 	testCompile "org.codehaus.groovy.modules.http-builder:http-builder:0.7.1"
 	testCompile "org.yaml:snakeyaml:1.23"
-	testCompile "org.spockframework:spock-core:1.2-groovy-2.5"
+	testCompile "org.spockframework:spock-core:1.2-groovy-2.4"
 	testCompile "org.hamcrest:hamcrest-core:1.3"
 	testCompile("com.athaydes:spock-reports:1.6.1") {
 		transitive = false
