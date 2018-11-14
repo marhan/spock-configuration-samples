@@ -1,4 +1,4 @@
-Spock configuration samples
+Spock configuration samples [![Build Status](https://travis-ci.org/marhan/spock-configuration-samples.svg?branch=master)](https://travis-ci.org/marhan/spock-configuration-samples)
 ===============================
 
 This project is a sample for different configuration variants, which can be used in a projects tested with Spock.
