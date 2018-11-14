@@ -14,10 +14,7 @@ Configuration variants
 
 Requirements
 -------------
-- JDK 11 (recommended)
-- JDK 10
-- JDK 9
-- JDK 8
+* Java Development Kit (JDK 11 recommended)
 
 Run tests with Gradle
 --------------------
